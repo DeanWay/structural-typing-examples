@@ -1,0 +1,14 @@
+{
+  "name": "structural-typing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "i18next": "^19.0.3"
+  }
+}
