@@ -1,12 +1,12 @@
 
 class Rectangle {
-    constructor(private x: number, private y: number) { }
-    area = () => this.x * this.y
+  constructor(private x: number, private y: number) { }
+  area = () => this.x * this.y
 }
 
 class EquilateralTriangle {
-    constructor(private side_len: number) { }
-    area = () => Math.sqrt(3) / 4 * this.side_len ** 2
+  constructor(private side_len: number) { }
+  area = () => Math.sqrt(3) / 4 * this.side_len ** 2
 }
 
 export const round_area = (shape: Rectangle) => Math.round(shape.area())
