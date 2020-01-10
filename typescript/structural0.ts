@@ -11,14 +11,14 @@ class EquilateralTriangle {
   height = () => (this.side_len * Math.sqrt(3)) * 2
 }
 
-export const round_area = (shape: { area(): number }) => Math.round(shape.area())
+export const roundArea = (shape: { area(): number }) => Math.round(shape.area())
 
 
 class SwimmingPool {
   area = () => 55.5
 }
 
-round_area(new Rectangle(100, 50))
-round_area(new EquilateralTriangle(5))
-round_area(new SwimmingPool())
-round_area({ area: () => 20.8 })
+roundArea(new Rectangle(100, 50))
+roundArea(new EquilateralTriangle(5))
+roundArea(new SwimmingPool())
+roundArea({ area: () => 20.8 })

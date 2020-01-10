@@ -7,24 +7,22 @@ class Rectangle extends Shape {
     super()
   }
   area = () => this.x * this.y
-  height = () => Math.max(this.x, this.y)
 }
 
 class EquilateralTriangle extends Shape {
-  constructor(private side_len: number) {
+  constructor(private sideLen: number) {
     super()
   }
-  area = () => Math.sqrt(3) / 4 * this.side_len ** 2
-  height = () => (this.side_len * Math.sqrt(3)) * 2
+  area = () => Math.sqrt(3) / 4 * this.sideLen ** 2
 }
-export const round_area = (shape: Shape) => Math.round(shape.area())
+export const roundArea = (shape: Shape) => Math.round(shape.area())
 
 
 class SwimmingPool {
   area = () => 55.5
 }
 
-round_area(new Rectangle(100, 50))
-round_area(new EquilateralTriangle(5))
+roundArea(new Rectangle(100, 50))
+roundArea(new EquilateralTriangle(5))
 // https://www.typescriptlang.org/docs/handbook/type-compatibility.html
-round_area(new SwimmingPool())
+roundArea(new SwimmingPool())

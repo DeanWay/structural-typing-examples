@@ -4,6 +4,6 @@ class Rectangle {
   area = () => this.x * this.y
 }
 
-export const round_area = (shape: Rectangle) => Math.round(shape.area())
+export const roundArea = (shape: Rectangle) => Math.round(shape.area())
 
-round_area(new Rectangle(100, 50))
+roundArea(new Rectangle(100, 50))

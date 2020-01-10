@@ -10,12 +10,12 @@ class Rectangle extends Shape {
 }
 
 class EquilateralTriangle extends Shape {
-  constructor(private side_len: number) {
+  constructor(private sideLen: number) {
     super()
   }
-  area = () => Math.sqrt(3) / 4 * this.side_len ** 2
+  area = () => Math.sqrt(3) / 4 * this.sideLen ** 2
 }
-export const round_area = (shape: Shape) => Math.round(shape.area())
+export const roundArea = (shape: Shape) => Math.round(shape.area())
 
-round_area(new Rectangle(100, 50))
-round_area(new EquilateralTriangle(5))
+roundArea(new Rectangle(100, 50))
+roundArea(new EquilateralTriangle(5))

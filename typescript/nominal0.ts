@@ -1,1 +1,1 @@
-export const round_area = (shape: any) => Math.round(shape.area())
+export const roundArea = (shape: any) => Math.round(shape.area())
