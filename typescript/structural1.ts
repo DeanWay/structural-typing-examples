@@ -14,18 +14,21 @@ openFile('hello.txt', 'x')
 interface Person {
   name: string
   age: number
+  worries: string[]
 }
 
 interface Boat {
   name: string
+  age: number
 }
 
 const joe: Person = {
   name: 'joe',
   age: 10,
+  worries: ['the future']
 }
 
-const boat: Boat = joe
+const joeBoat: Boat = joe // no worries!
 
 // Intersection types and recursive type definitions!
 type LinkedList<T> = T & { next: LinkedList<T> }
