@@ -1,6 +1,6 @@
 from abc import ABCMeta, abstractmethod
 from math import sqrt
-from typing import Union, Protocol
+from typing import Union, Protocol, SupportsRound
 
 class Rectangle:
     def __init__(
@@ -28,7 +28,7 @@ class SwimmingPool:
 
 
 class Shape(Protocol):
-    def area(self) -> Union[int, float]: ...
+    def area(self) -> SupportsRound: ...
 
 def round_area(shape: Shape):
     return int(round(shape.area()))
