@@ -7,8 +7,6 @@ verify_ssl = true
 mypy = "*"
 
 [packages]
-pydantic = "*"
-typing-extensions = "*"
 fastapi = "*"
 uvicorn = "*"
 graphene = "*"
