@@ -57,16 +57,18 @@ export type GetShapeQuery = (
 
 export const GetShapeDocument = gql`
     query getShape {
-  __typename
   shape {
     ... on Square {
+      __typename
       sideLen
     }
     ... on Rectangle {
+      __typename
       width
       height
     }
     ... on Circle {
+      __typename
       radius
     }
   }
