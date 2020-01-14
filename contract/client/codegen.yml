@@ -1,0 +1,18 @@
+schema: http://localhost:8000
+documents: ./src/**/*.graphql
+generates:
+  ./src/gql/fragment-matcher.ts:
+    plugins:
+      - fragment-matcher
+    config:
+      apolloClientVersion: '2'
+  ./src/gql/types.tsx:
+    plugins:
+      - typescript
+      - typescript-resolvers
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true
+      withHOC: false
+      nonOptionalTypename: true

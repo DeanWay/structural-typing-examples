@@ -1,22 +1,18 @@
 import React from 'react';
 import './App.css';
 import { ApolloProvider } from '@apollo/react-hooks';
-import { useQuery } from '@apollo/react-hooks';
 
 import client from './gql/client';
-import { getShape } from './gql/shape'
-import { getShapeQueryType } from './gql/__generated__/getShapeQueryType'
+import { useGetShapeQuery } from './gql/types'
 
 
 const Shape: React.FC = () => {
-  const { loading, error, data } = useQuery<getShapeQueryType>(getShape);
+  const { loading, error, data } = useGetShapeQuery();
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{JSON.stringify(error)}</p>;
-  const { shape } = data || {};
-  if (!shape) {
-  return <p>{String(data)}</p>
-  }
-  switch(shape.__typename) {
+  if (!data?.shape) return <p>Error!</p>
+  const { shape } = data;
+  switch (shape.__typename) {
     case 'Square':
       return <p>side len: {shape.sideLen}</p>
     case 'Rectangle':

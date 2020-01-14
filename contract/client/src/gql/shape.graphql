@@ -1,0 +1,15 @@
+query getShape {
+  __typename
+  shape {
+    ... on Square {
+      sideLen
+    }
+    ... on Rectangle {
+      width
+      height
+    }
+    ... on Circle {
+      radius
+    }
+  }
+}
