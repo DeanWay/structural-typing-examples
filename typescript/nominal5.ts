@@ -8,7 +8,7 @@ class Rectangle extends Shape {
     super()
   }
   area = () => this.x * this.y
-  height = () => Math.max(this.x, this.y)
+  height = () => Math.min(this.x, this.y)
 }
 
 class EquilateralTriangle extends Shape {
@@ -16,8 +16,9 @@ class EquilateralTriangle extends Shape {
     super()
   }
   area = () => Math.sqrt(3) / 4 * this.sideLen ** 2
-  height = () => (this.sideLen * Math.sqrt(3)) * 2
+  height = () => this.sideLen * Math.sqrt(3) * 2
 }
+
 export const roundArea = (shape: Shape) => Math.round(shape.area())
 
 

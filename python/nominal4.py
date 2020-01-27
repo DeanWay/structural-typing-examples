@@ -11,14 +11,14 @@ class Shape(metaclass=ABCMeta):
 class Rectangle(Shape):
     def __init__(
         self,
-        x: int = 0,
-        y: int = 0,
+        width: int,
+        height: int,
     ):
-        self.x = x
-        self.y = y
+        self.width = width
+        self.height = height
 
     def area(self) -> int:
-        return self.x * self.y
+        return self.width * self.height
 
 
 class EquilateralTriangle(Shape):

@@ -3,10 +3,10 @@ abstract class Shape {
 }
 
 class Rectangle extends Shape {
-  constructor(private x: number, private y: number) {
+  constructor(private width: number, private height: number) {
     super()
   }
-  area = () => this.x * this.y
+  area = () => this.width * this.height
 }
 
 class EquilateralTriangle extends Shape {

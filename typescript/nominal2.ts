@@ -1,7 +1,7 @@
 
 class Rectangle {
-  constructor(private x: number, private y: number) { }
-  area = () => this.x * this.y
+  constructor(private width: number, private height: number) { }
+  area = () => this.width * this.height
 }
 
 class EquilateralTriangle {
